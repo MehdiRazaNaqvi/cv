@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
+import App from "./components/home.jsx"
+
+
+
+
 ReactDOM.render(
-  <React.StrictMode>
+
+  // <Mainn />
+
+
+  
+
     <App />
-  </React.StrictMode>,
+
+
+
+  ,
   document.getElementById('root')
 );
 
