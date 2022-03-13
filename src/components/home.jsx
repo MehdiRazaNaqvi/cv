@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../App.css"
 
 import TextField from '@mui/material/TextField';
+
 import main from "./imgg.svg"
 
 
@@ -10,22 +11,26 @@ const Home = () => {
 
 
 
-    let [data, setdata] = useState({ name: "", city: "", des: "", age: "", lang: "", exp: "", skills: "" , cert : "" , edu : "" , ref : ""})
+    let [data, setdata] = useState({ name: "", city: "", des: "", age: "", lang: "", exp: "", skills: "", cert: "", edu: "", ref: "", img: "" })
 
     return (
 
         <div className="grand" >
-            
+
 
             <div className="input_div">
 
-                
-                
-                 <img className="main_img" src={main} alt="" />
+
+
+                <img className="main_img" src={main}  />
+
+
 
 
                 <div className="pehla_dabba" >
-                        
+
+
+
                     <TextField
 
                         id="standard-multiline-static"
@@ -81,65 +86,80 @@ const Home = () => {
 
                 </div>
 
+
+
+
                 <div className="dosra_dabba">
 
 
-                  
-                        <TextField
-                            id="standard-multiline-static input"
-                            label="Experiance"
-                            multiline
-                            // size="medium"
-                            placeholder='Enter experiance'
-                            variant="standard"
-                            onChange={(e) => setdata({ ...data, exp: e.target.value })}
-                        />
 
-                        <TextField
-                            id="standard-multiline-static input"
-                            label="Skills"
-                            multiline
-                            // size="medium"
-                            placeholder='Enter skills'
-                            variant="standard"
-                            onChange={(e) => setdata({ ...data, skills: e.target.value })}
-                        />
+                    <TextField
+                        id="standard-multiline-static input"
+                        label="Experiance"
+                        multiline
+                        // size="medium"
+                        placeholder='Enter experiance'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, exp: e.target.value })}
+                    />
 
-                        <TextField
-                            id="standard-multiline-static input"
-                            label="Certification"
-                            multiline
-                            // size="medium"
-                            placeholder='Enter Certifications'
-                            variant="standard"
-                            onChange={(e) => setdata({ ...data, cert: e.target.value })}
-                        />
+                    <TextField
+                        id="standard-multiline-static input"
+                        label="Skills"
+                        multiline
+                        // size="medium"
+                        placeholder='Enter skills'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, skills: e.target.value })}
+                    />
 
-                  
-                
-                        <TextField
-                            id="standard-multiline-static input"
-                            label="Education"
-                            multiline
-                            // size="medium"
-                            placeholder='Enter education'
-                            variant="standard"
-                            onChange={(e) => setdata({ ...data, edu: e.target.value })}
-                        />
-
-                        <TextField
-                            id="standard-multiline-static input"
-                            label="Reference"
-                            multiline
-                            // size="medium"
-                            placeholder='Enter reference'
-                            variant="standard"
-                            onChange={(e) => setdata({ ...data, ref: e.target.value })}
-                        />
+                    <TextField
+                        id="standard-multiline-static input"
+                        label="Certification"
+                        multiline
+                        // size="medium"
+                        placeholder='Enter Certifications'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, cert: e.target.value })}
+                    />
 
 
 
-                    
+                    <TextField
+                        id="standard-multiline-static input"
+                        label="Education"
+                        multiline
+                        // size="medium"
+                        placeholder='Enter education'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, edu: e.target.value })}
+                    />
+
+                    <TextField
+                        id="standard-multiline-static input"
+                        label="Reference"
+                        multiline
+                        // size="medium"
+                        placeholder='Enter reference'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, ref: e.target.value })}
+                    />
+
+
+                    <TextField
+
+                        id="standard-multiline-static input"
+                        label="Photo"
+                        multiline
+                        value=""
+                        placeholder='Enter img address'
+                        variant="standard"
+                        onChange={(e) => setdata({ ...data, img: e.target.value })}
+                    />
+
+
+
+
 
 
 
@@ -150,8 +170,6 @@ const Home = () => {
 
 
             </div>
-
-
 
 
 
@@ -179,12 +197,15 @@ const Home = () => {
                     </span>
 
                     <span className="panch" >
+
                         <h3> {data.lang}</h3>
+
                     </span>
 
                 </div>
 
-                <div className="item item2"> </div>
+                <div className="item item2">
+                    <img className="choti_img" src={data.img} alt="nae arhi" /> </div>
 
                 <div className="item item3"> <h1>Experiance </h1> {data.exp} </div>
                 <div className="item item4"> <h1>Skills</h1>  {data.skills} </div>
@@ -204,9 +225,7 @@ const Home = () => {
     )
 }
 
-// const mapDispatchToProps = (dispatch) => ({
-//     pressed: () => dispatch(pressed(data.name, data.age, data.qual, data.experiance))
-// })
+
 export default Home
 
 

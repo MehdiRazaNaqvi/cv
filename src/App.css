@@ -2,15 +2,14 @@ body{
   display: flex;
   justify-content: center;
 
-  /* background-color: whitesmoke; */
+  background-color: rgb(255, 249, 255);
 }
 .parent{
   width: 80vw;
-  height: 95vh;
+  height: 100vh;
   /* background-color: rgb(228, 228, 228);    */
-  /* border-left: 4px solid rgb(255, 166, 0); */
 
-  padding: 5px;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(3 , 1fr);
   grid-template-rows: repeat(3 , 1fr);
@@ -33,7 +32,7 @@ h2{
 .item{
   
   place-self: center;
-  background-color:azure;
+  background-color:rgb(240, 254, 255);
   width: 100%;
   height: 100%;
 /* 
@@ -44,17 +43,20 @@ h2{
   
 }
 
-.item5:hover , .item4:hover , .item3:hover , .item6:hover , .item7:hover , .pehla:hover , .dosra:hover , .tesra:hover , .chota:hover , .panch:hover{
-  display: none;
-  font-style: oblique;
-  font-size: x-small;
+
+
+
+.item5:hover , .item4:hover , .item3:hover , .item6:hover , .item7:hover{
+  font-style:oblique;
+  font-size: 0px;
   /* background-image: linear-gradient(to left , azure , white);  */
   background-color:white;
   display: flex;
   flex-direction: column;
   justify-content: center;  
+  
+  border-left: 2px solid rgb(255, 166, 0);
 
-  text-transform: capitalize;
 }
 
 
@@ -71,7 +73,7 @@ h2{
 
 .item1{
   
-  border-left: 4px solid rgb(255, 166, 0);
+  /* border-left: 2px solid rgb(255, 166, 0); */
   /* background-color: rgb(255, 166, 0); */
   grid-column: 1/3;
   max-height: 100%;
@@ -81,7 +83,8 @@ h2{
   column-gap: 5px;
   row-gap: 5px;
 
-  /* background-image: linear-gradient(to right ,rgba(255, 166, 0, 0.671)  , white); */
+  border-left: 2px solid rgb(255, 166, 0);
+
 
 }
 
@@ -111,11 +114,14 @@ align-items: center;
 
 
 
-.item2{
+.item2 , .choti_img{
   
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  
+
+
 }
 
 .item3{
@@ -164,9 +170,9 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding-right: 50px;
-  padding-left: 50px;
+/* 
+  padding-right: 200px;
+  padding-left: 200px; */
 
   
   background-color: rgb(251, 255, 255);
@@ -193,9 +199,7 @@ height: 90%;
   justify-content: center;
   align-items: center;
 
-  /* background-color: rgb(218, 253, 255); */
-  ;
-
+ 
 }
 
 .dosra_dabba{
@@ -214,3 +218,5 @@ height: 90%;
 
 
 }
+
+
